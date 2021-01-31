@@ -30,7 +30,7 @@ delta = ((p / 2)**2 - q)   # beräkna värdet för uttrycket under kvadratroten 
 
 if delta < 0:  # Komplexa lösningar
     i = round(sqrt(- delta), 2)  # beräknar imaginära delen       # utan math.py:  i = round(((- delta))**0.5, 2)
-    # print("Två komplexa lösningar: x_1 = " + str(round(s, 2)) + " + " + str(i) + "i och x_2 = " + str(round(s, 2)) + " - " + str(i) + "i.")
+
     print("Två komplexa lösningar: ")
     print("x1 = " + str(round(s, 2)) + " + " + str(i) + "i")
     print("x2 = " + str(round(s, 2)) + " - " + str(i) + "i")
@@ -41,7 +41,7 @@ elif delta == 0:
 else:
     x1 = round(s+sqrt(delta), 2)                        # utan math.py: x1 = round(s + ((s))**0.5, 2)
     x2 = round(s-sqrt(delta), 2)                        # utan math.py: x2 = round(s + ((s))**0.5, 2)
-    # print("Två reella lösningar: x_1 = " + str(x1) + " och x_2 = " + str(x2))
+
     print("Två reella lösningar: ")
     print("x1 = " + str(x1))
     print("x2 = " + str(x2))
