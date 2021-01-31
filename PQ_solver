@@ -18,13 +18,13 @@ p = float(input("p = "))
 q = float(input("q = "))
 
 # dividerar bort a
-p = p / a
-q = q / a
+p = (p / a)
+q = (q / a)
 
 
 # Vi löser ekvationen med PQ formeln
 
-s = - p / 2          # hittar symmetrilinjen
+s = (- p / 2)          # hittar symmetrilinjen
 delta = ((p / 2)**2 - q)   # beräkna värdet för uttrycket under kvadratroten ...
 
 
