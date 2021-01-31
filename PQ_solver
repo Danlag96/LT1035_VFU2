@@ -1,0 +1,42 @@
+# Fredrik Lagerström
+# 2021-01-31
+# PQ-solver
+
+from math import *
+
+#print("Programmet löser en andragradsekvation av typen ax\u00b2+px+q=0 \n")
+
+print("\n Programmet löser en 2:a grads ekv. av typen ax^2 + bx + c = 0")
+print("Ange följande: ")
+
+a = float(input("a = "))
+if a == 0:
+    print("Division med noll ej definierat.")
+    exit()
+
+p = float(input("p = "))
+q = float(input("q = "))
+
+# dividerar bort a
+p = p / a
+q = q / a
+
+
+# Vi löser ekvationen med PQ formeln
+
+s = - p / 2          # hittar symmetrilinjen
+delta = ((p / 2)**2 - q)   # beräkna värdet för uttrycket under kvadratroten ...
+
+
+if delta < 0:  # Komplexa lösningar
+    i = round(sqrt(- delta), 2)  # beräknar imaginära delen       # utan math.py:  i = round(((- delta))**0.5, 2)
+    print("Två komplexa lösningar: x_1 = " + str(round(s, 2)) + " + " + str(i) + "i och x_2 = " + str(round(s, 2)) + " - " + str(i) + "i.")
+
+elif delta == 0:
+    print("En dubbelrot: x = " + str(round(s, 2)))
+else:
+    x1 = round(s+sqrt(delta), 2)                        # utan math.py: x1 = round(s + ((s))**0.5, 2)
+    x2 = round(s-sqrt(delta), 2)                        # utan math.py: x2 = round(s + ((s))**0.5, 2)
+    print("Två reella lösningar: x_1 = " + str(x1) + " och x_2 = " + str(x2))
+
+
